@@ -75,7 +75,7 @@ inputs:
     position: 2
     shellQuote: false
     valueFrom: |-
-      set -eo pipefail; mkdir input_folder; parallel -P $(inputs.max_downloads) --jl parallel.log --shuf --timeout 1200 --retries 5 --delay 5 bash -c :::: $(self.path) || exit 1; find -type f -name 'sample-*.g.vcf.gz' | sort |
+      set -eo pipefail; mkdir input_folder; parallel -P $(inputs.max_downloads) --jl parallel.log --shuf --timeout 1200 --retries 5 --delay 5 bash -c :::: $(self.path) || exit 1; sentieon util vcfindex input_folder/*.g.vcf.gz; find -type f -name 'sample-*.g.vcf.gz' | sort |
 - id: reference
   label: Reference
   doc: Reference fasta file with associated indexes
