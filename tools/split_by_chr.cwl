@@ -10,7 +10,7 @@ requirements:
 - class: ResourceRequirement
   coresMin: $(inputs.threads)
 - class: DockerRequirement
-  dockerPull: pgc-images.sbgenomics.com/hdchen/sentieon:202308.02_cavatica
+  dockerPull: pgc-images.sbgenomics.com/hdchen/sentieon:202308.02_cavatica_patched
 - class: InlineJavascriptRequirement
 - class: EnvVarRequirement
   envDef:

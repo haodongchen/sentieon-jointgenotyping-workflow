@@ -15,7 +15,7 @@ requirements:
   coresMin: $(inputs.cpu_per_job)
   ramMin: $(inputs.mem_per_job * 1000)
 - class: DockerRequirement
-  dockerPull: pgc-images.sbgenomics.com/hdchen/sentieon:202308.02_cavatica
+  dockerPull: pgc-images.sbgenomics.com/hdchen/sentieon:202308.02_cavatica_patched
 - class: EnvVarRequirement
   envDef:
   - envName: SENTIEON_LICENSE
